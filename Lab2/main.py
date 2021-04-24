@@ -25,24 +25,24 @@ for i in range(0, len(gross)):
 
 #Print all detail
 def detail():
-    print("Mean      Budget :",str(stc.mean(budget)))
-    print("          Gross  :",str(stc.mean(gross)))
-    print("Mode      Budget :",str(stc.mode(budget)))
-    print("          Gross  :",str(stc.mode(gross)))
-    print("Median    Budget :",str(stc.median(budget)))
-    print("          Gross  :",str(stc.median(gross)))
-    print("Deviation Budget :",str(stc.stdev(budget)))
-    print("          Gross  :",str(stc.stdev(gross)))
-    print("Minimum Budget :",str(min(budget)))
-    print("          Gross  :",str(min(gross)))
-    print("Maximum Budget :",str(max(budget)))
-    print("          Gross  :",str(max(gross)))
+    print("Mean      Budget : {:.4f}".format(stc.mean(budget)))
+    print("          Gross  : {:.4f}".format(stc.mean(gross)))
+    print("Mode      Budget : {:.4f}".format(stc.mode(budget)))
+    print("          Gross  : {:.4f}".format(stc.mode(gross)))
+    print("Median    Budget : {:.4f}".format(stc.median(budget)))
+    print("          Gross  : {:.4f}".format(stc.median(gross)))
+    print("Deviation Budget : {:.4f}".format(stc.stdev(budget)))
+    print("          Gross  : {:.4f}".format(stc.stdev(gross)))
+    print("Minimum   Budget : {:.4f}".format(min(budget)))
+    print("          Gross  : {:.4f}".format(min(gross)))
+    print("Maximum   Budget : {:.4f}".format(max(budget)))
+    print("          Gross  : {:.4f}".format(max(gross)))
 
 def histogram():
     fig, ax = plt.subplots(1, 2, sharey=True)
 
     ax[0].set_xlabel('Budget (million us dollar)')
-    ax[0].set_ylabel('Quality')
+    ax[0].set_ylabel('Quantity')
     ax[0].set_title('Budget')
     ax[0].hist(budget, bins=30)
 
@@ -75,7 +75,7 @@ def stem():
 def scatter():
     plt.xlabel('Budget (million us dollar)')
     plt.ylabel('Gross (million us dollar)')
-    plt.title('Profit')
+    plt.title('Movie profits')
     plt.scatter(budget,gross)
     plt.show()
 
@@ -118,6 +118,6 @@ if __name__ == "__main__":
     # histogram()
     # boxplot()
     # stem()
-    # scatter()
+    scatter()
     # densityplot()
-    cumulative()
+    # cumulative()
