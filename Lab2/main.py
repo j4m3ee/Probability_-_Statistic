@@ -118,6 +118,6 @@ if __name__ == "__main__":
     # histogram()
     # boxplot()
     # stem()
-    scatter()
+    # scatter()
     # densityplot()
-    # cumulative()
+    cumulative()
