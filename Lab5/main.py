@@ -27,7 +27,7 @@ def regression_line():
 
     plt.xlabel('Budget (million us dollar)')
     plt.ylabel('Gross (million us dollar)')
-    plt.title('Movie profits')
+    plt.title('Linear Regression')
     plt.scatter(budget, gross)
 
     # z is Predicted vector
@@ -35,7 +35,9 @@ def regression_line():
 
     plt.plot(budget, z, color='r')
 
-    print('Estimated coefficients = {:.4f} + {:.4f}X'.format(W[1],W[0]))
+    print()
+    print('Estimated coefficients : Y-Intercept = {:.4f} Slope = {:.4f}'.format(W[1],W[0]))
+    print('Linear Regression      : Y = {:.4f} + {:.4f}X'.format(W[1],W[0]))
     plt.show()
 
 if __name__ == "__main__":
