@@ -75,7 +75,7 @@ def stem():
 def scatter():
     plt.xlabel('Budget (million us dollar)')
     plt.ylabel('Gross (million us dollar)')
-    plt.title('Movie profits')
+    plt.title('Movie industry')
     plt.scatter(budget,gross)
     plt.show()
 
@@ -118,6 +118,6 @@ if __name__ == "__main__":
     # histogram()
     # boxplot()
     # stem()
-    # scatter()
+    scatter()
     # densityplot()
-    cumulative()
+    # cumulative()
